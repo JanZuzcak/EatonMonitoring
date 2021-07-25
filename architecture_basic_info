@@ -1,0 +1,18 @@
+Solution contains three projects:
+1. DataModels - is static library that contains data models sent from device to server including json serialization/deserialization routines
+2. Device 
+	- executable application that collects measured values from device and sends them to server via udp connection
+	- brief description of main objects:
+		- DeviceManeger is a root application object, it manages DataSender and MeasurementReader objects
+		- MeasurementReader is an object responsible for reading measured values from device, recently DummyMeasurementReader with randomly generated values is used instead
+		- DataSender sends measured values as json stream to server
+3. Server
+	- executable application that receives measured values from devices and makes some statistics from received data
+	- brief description of main objects:
+		- ServerManeger is a root application object, it manages DataReceiver and DataProcessor objects
+		- DataProcessor is an object responsible for making some simple statistics from received device data
+		- DataReceiver receives measured values from devices
+
+3rd party libraries used in the solution:
+- nlohmann json library v3.9.1
+- asio v1.19.1

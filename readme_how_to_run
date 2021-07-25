@@ -1,0 +1,12 @@
+- open this root folder in VSCode or your favorite IDE 
+- rebuild whole solution
+
+- run server in folder \build\Server\Debug\ 
+ - optionally, port number the server listen on might be specified: "server [portNum]"
+ - sample of cmd line with optional args for server app: "server 1234"
+
+- run device.exe in folder \build\Device\Debug\ 
+ - optionally, deviceId, server ipAddress and server port number might be specified: "device [deviceId] [ipAddress] [portNum]"
+ - sample of cmd line with optional args for device app: "device Device1 192.168.1.110 1234"
+
+- for optional arguments, see also description in Device/main.cpp and Server/main.cpp
